@@ -1,0 +1,55 @@
+<div class= 'login-form'>
+  <h2>Sign Up</h2>
+  <% unless params.valid? %>
+    <div class= "errors">
+      <h4>There was a problem with sign up</h4>
+      <ul>
+        <% params.error_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <hr>
+  <%=
+    form_for :user, routes.sign_up_path, class: 'form-group' do
+      div do
+        label "Email"
+        text_field :email, class: 'form-control'
+      end
+
+      div do
+        label "Name"
+        text_field :name, class: 'form-control'
+      end
+
+      div do
+        label "Suburb"
+        text_field :suburb, class: 'form-control'
+      end
+
+      div do
+        label "Postcode"
+        text_field :postcode, class: 'form-control'
+      end
+
+      div do
+        label "State"
+        text_field :state, class: 'form-control'
+      end
+
+      div do
+        label "Password"
+        password_field :password, class: 'form-control'
+      end
+
+      div do
+        label "Password Confirmation"
+        password_field :password_confirmation, class: 'form-control'
+      end
+
+      submit 'Sign Up',class: "btn btn-primary"
+    end
+  %>
+</div>

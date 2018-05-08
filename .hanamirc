@@ -1,0 +1,3 @@
+project=mothers_group
+test=minitest
+template=erb
