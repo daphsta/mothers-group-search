@@ -1,4 +1,4 @@
-require_relative '../../../spec_helper'
+require_relative '../../../../spec_helper'
 
 describe Web::Controllers::Home::Index do
   let(:action) { Web::Controllers::Home::Index.new }
